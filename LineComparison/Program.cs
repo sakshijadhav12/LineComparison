@@ -47,13 +47,21 @@
 
             Console.WriteLine("\nLength of the first line is: " + line1Length);
             Console.WriteLine("Length of the second line is: " + line2Length);
+            //comparing 
+            int comparisonResult = line1Length.CompareTo(line2Length);
 
-            // Compare if lines are equal
-            bool linesEqual = line1Length.Equals(line2Length);
-            if (linesEqual)
+            if (comparisonResult == 0)
+            {
                 Console.WriteLine("The lines are equal.");
+            }
+            else if (comparisonResult > 0)
+            {
+                Console.WriteLine("The first line is greater than the second line.");
+            }
             else
-                Console.WriteLine("The lines are not equal.");
+            {
+                Console.WriteLine("The first line is less than the second line.");
+            }
         }
     }
 }
